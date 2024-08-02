@@ -1,6 +1,6 @@
 import React from "react";
 import useFetchPhotos from "../hooks/useFetchPhotos";
-
+import LoadingImage from "../assets/loader.gif";
 interface Customer {
   id: string;
   name: string;
@@ -23,7 +23,7 @@ const CustomerDetails: React.FC<Props> = ({ customer }) => {
       {!error && (
         <div className="photo-grid">
           {photos.map((photo, index) => (
-            <img key={index} loading="lazy" src={photo || ""} alt="Customer" />
+            <img key={index} loading="lazy" src={photo || LoadingImage} alt="Customer" />
           ))}
         </div>
       )}

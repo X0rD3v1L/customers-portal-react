@@ -7,11 +7,9 @@ const useFetchPhotos = (customerId: string) => {
 
   const fetchPhotos = async () => {
     try {
-      const requests = Array.from({ length: 9 }, () =>
-        axios.get("https://picsum.photos/200/300?random=" + Math.random())
-      );
-      const responses = await Promise.all(requests);
-      const photoUrls = responses.map((response) => response.request.responseURL);
+      const randomPage = Math.floor(Math.random() * 100) + 1;
+      const response = await axios.get(`https://picsum.photos/v2/list?page=${randomPage}&limit=9`);
+      const photoUrls = response.data.map((photo: { download_url: string }) => photo.download_url);
       setPhotos(photoUrls);
       setError(null);
     } catch (error) {
