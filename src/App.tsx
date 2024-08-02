@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import CustomerList from './components/CustomerList';
+import CustomerDetails from './components/CustomerDetails';
+import customersData from './data/customers.json';
 
-function App() {
+interface Customer {
+  id: string;
+  name: string;
+  title: string;
+  address: string;
+}
+
+const App: React.FC = () => {
+  const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(customersData[0]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="customer-list">
+        <CustomerList 
+          customers={customersData}
+          selectedCustomerId={selectedCustomer ? selectedCustomer.id : null}
+          setSelectedCustomer={setSelectedCustomer}
+        />
+      </div>
+      <div className="customer-details">
+        {selectedCustomer && <CustomerDetails customer={selectedCustomer} />}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
