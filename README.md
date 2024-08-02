@@ -1,4 +1,4 @@
-# Customer Portal App
+<a href="https://www.loom.com/share/91dc6e636c8342238fac2b50fcecc130?sid=e74a7739-29e1-4c0f-9019-60de1938a983" style="font-size:32px;">Customer Portal App</a>
 
 A React application designed to display and manage customer information. This project includes features for viewing customer details and dynamically fetching and displaying photos associated with each customer.
 
