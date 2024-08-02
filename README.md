@@ -39,5 +39,4 @@ A React application designed to display and manage customer information. This pr
 
 ## Usage
 
-Run the application and navigate to the customer details page to view customer information and a gallery of photos.
-Photos will refresh every 10 seconds, and any errors during fetching will be displayed to the user.
+Run the application and click on any customer from the list on left side to view customer information and a gallery of photos. Photos will refresh every 10 seconds, and any errors during fetching will be displayed to the user.
