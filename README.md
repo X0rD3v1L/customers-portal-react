@@ -18,9 +18,10 @@ A React application designed to display and manage customer information. This pr
 
 ## Project Structure
 
+- **`assets/`**: Contains a `loader.gif` to shown while loading.
 - **`components/`**: Contains reusable React components like `CustomerList` and `CustomerDetails`.
-- **`hooks/`**: Custom React hooks such as `useFetchPhotos` for encapsulating logic.
 - **`data/`**: Static data files, including `customers.json`.
+- **`hooks/`**: Custom React hooks such as `useFetchPhotos` for encapsulating logic.
 
 
 ## Installation
